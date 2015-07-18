@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../module/Users/public/css/farbtastic.css" type="text/css" />
+        <link rel="stylesheet" href="../module/Users/public/css/styles.css" type="text/css" />
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+        google.load("jquery", "1.4.2");
+        google.load("webfont", "1");
+        google.setOnLoadCallback(function() {
+            $('#selectH1').googleFontPicker({ 
+                defaultFont: 'Allan',
+                callbackFunc: function(fontFamily){
+                    $('#demo').css('fontFamily', fontFamily);
+                    $('#output-code').val($(".demo").html());
+                    $('#google-code').val('<link href="http://fonts.googleapis.com/css?family='+fontFamily+'" rel="stylesheet" type="text/css">');
+                }
+            });
+        WebFont.load({
+                google: {
+                    families: [ 'Tangerine', 'Cantarell', 'Droid Sans','Allan','Allerta','Allerta Stencil','Anonymous Pro','Arimo','Arvo','Bentham','Buda','Cabin','Calligraffitti','Cantarell','Cardo','Cherry Cream Soda','Chewy','Coda','Coming Soon','Copse','Corben','Cousine','Covered By Your Grace','Crafty Girls','Crimson Text','Crushed','Cuprum','Droid Sans','Droid Sans Mono','Droid Serif','Fontdiner Swanky','GFS Didot','GFS Neohellenic','Geo','Gruppo','Hanuman','Homemade Apple','IM Fell DW Pica','IM Fell DW Pica SC','IM Fell Double Pica','IM Fell Double Pica SC','IM Fell English','IM Fell English SC','IM Fell French Canon','IM Fell French Canon SC','IM Fell Great Primer','IM Fell Great Primer SC','Inconsolata','Irish Growler','Josefin Sans','Josefin Slab','Just Another Hand','Just Me Again Down Here','Kenia','Kranky','Kristi','Lato','Lekton','Lobster','Luckiest Guy','Merriweather','Molengo','Mountains of Christmas','Neucha','Neuton','Nobile','OFL Sorts Mill Goudy TT','Old Standard TT','Orbitron','PT Sans','PT Sans Caption','PT Sans Narrow','Permanent Marker','Philosopher','Puritan','Raleway','Reenie Beanie','Rock Salt','Schoolbell','Slackey','Sniglet','Sunshiney','Syncopate','Tangerine','Tinos','Ubuntu','UnifrakturCook','UnifrakturMaguntia','Unkempt','Vibur','Vollkorn','Walter Turncoat','Yanone Kaffeesatz']
+                }
+            }); 
+        }); 
+        </script>
+        <script type="text/javascript" src="../module/Users/public/js/farbtastic.js"></script>
+        <script type="text/javascript" src="../module/Users/public/js/function.js"></script>
+        <script type="text/javascript" src="../module/Users/public/js/jquery.googlefontpicker.js"></script>
+        <title>1000ka - Création de Boutons</title>
+    </head>
+    <body>
+        <div id="content">
+            <h1>Création de boutons</h1><br><br>
+            <div id="block">
+                <div id="champlarge">
+                    <label>Texte du bouton</label><br><br>
+                    <input type="checkbox" id="bold" name="bold"/> Gras &nbsp;<a href="#" id='selectH1' class="selector"></a><br><br>
+                    <input type="text" id="text_btn" name="text_btn"/><br><br>
+                    <label><input id="check_img" name="check_img" type="checkbox"> Image de fond</label><br><br>
+                    <input type="text" id="text_img" name="text_img" Placeholder="http://url_img.jpg"/><br><br>
+                    URL<br><br>
+                    <input type="text" id="url" name="url" value="http://"/><br><br>
+                </div>
+                <label>Taille de Police</label><br><br>
+                <input type="text" id="size" name="size" value="13"> px<br><br>
+                <label>Largeur</label><br><br>
+                <input type="text" id="text_width" name="text_width" value="200"> px<br><br>
+                <label>Hauteur</label><br><br>
+                <input type="text" id="text_height" name="text_height" value="40"> px<br><br>
+                <label><input id="check_border" name="check_border" type="checkbox"> Bordure</label><br><br>
+                <input type="text" id="text_border" name="text_border" value="#000000"/><br><br>                
+                <label><input id="check_radius" name="check_radius" type="checkbox"> Border arrondis</label><br><br>
+                <span class="message_mail"></span><br>
+                <input type="text" id="text_radius" name="text_radius" value="4"/> px<br><br>
+                Couleur de fond<br><br>
+                <input type="text" id="colorbg" name="colorbg" value="#556270"/><br><br>
+                <div id="colorpicker"></div><br><br>
+            </div>
+            <div id="block2">
+                <div id="preview">
+                    <div class="demo">
+                        <a id="demo" style="border-radius: 0px;color: #FFFFFF;display: block;font-family: Arial;font-size: 13px;line-height: 40px;text-align: center;text-decoration: none;width: 200px;height: 40px;" autocomplete="off" target="_blank" href="http://"></a></div>
+                </div>
+                <div id="code">
+                    <br><br>
+                    Code Bouton<br><br>
+                    <textarea id="output-code" rows="30"></textarea>
+                    <br><br>
+                    Script google<br><br>
+                    <textarea id="google-code"></textarea>
+                    <br><br>
+                    <input type="submit" name="generate" id="generate" value="Enregistrer">
+                </div><br><br>
+                <div id="shadow">
+                    <input type="checkbox" id="checkdow" name="checkdow"/>Ombres portées<br><br>
+                    <span class="message_mail2"></span><br>
+                    <label for="spinner">Effet Flou :</label> <input type="text" id="flou" name="flou" value="10"/> px<br><br>
+                    Positionnement Horizontal : <input type="text" id="hori" name="hori" value="0"/> px<br><br>
+                    Positionnement Vertical : <input type="text" id="verti" name="verti" value="0"/> px
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
